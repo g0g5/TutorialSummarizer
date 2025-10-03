@@ -10,15 +10,14 @@
 - Saves output to specified filename
 
 ## Requirements
-- Python 3.8+
-- Google Generative AI Python SDK (`google-genai`)
-- python-dotenv
+- Python 3.10+
+- `uv` (Python package manager)
 
 ## Installation
 1. Clone this repository
 2. Install dependencies:
    ```bash
-   pip install -U google-genai python-dotenv
+   uv sync
    ```
 3. Create a `.env` file with your Gemini API key:
    ```
@@ -28,7 +27,7 @@
 ## Usage
 Run the script:
 ```bash
-python main.py
+uv run main.py
 ```
 You'll be prompted to:
 1. Enter the YouTube video URL to summarize
@@ -38,7 +37,7 @@ The summary will be saved as `[filename].md` in the current directory.
 
 ## Example
 ```bash
-$ python main.py
+$ uv run main.py
 Enter YouTube video URL to summarize: https://www.youtube.com/watch?v=soMeV1de0id
 Enter output filename (without extension): video_summary
 Success: Summary saved to video_summary.md
